@@ -38,7 +38,7 @@ Use the AskUserQuestion tool to ask the user whether they want the temperature
 in Celsius or Fahrenheit.
 
 ### Step 2: Fetch Weather Data
-Use the Task tool to invoke the weather agent:
+Use the Agent tool to invoke the weather agent:
 - subagent_type: weather-agent
 - prompt: Fetch the current temperature for Dubai, UAE in [unit]...
 
@@ -49,7 +49,7 @@ Use the Skill tool to invoke the weather-svg-creator skill:
 ...
 ```
 
-The command orchestrates the entire workflow: it asks the user for their temperature unit preference, invokes the `weather-agent` via the Task tool, and then invokes the `weather-svg-creator` skill via the Skill tool.
+The command orchestrates the entire workflow: it asks the user for their temperature unit preference, invokes the `weather-agent` via the Agent tool, and then invokes the `weather-svg-creator` skill via the Skill tool.
 
 ---
 
@@ -73,7 +73,7 @@ Ask Claude to create one for you — it will generate the markdown file with YAM
 The weather orchestrator is the **Command** in the Command → Agent → Skill orchestration pattern. It serves as the entry point — handling user interaction (temperature unit preference), delegating data fetching to the `weather-agent`, and invoking the `weather-svg-creator` skill for visual output.
 
 <p align="center">
-  <img src="../!/command-skill-agent-flow.svg" alt="Command Skill Agent Architecture Flow" width="100%">
+  <img src="../orchestration-workflow/orchestration-workflow.svg" alt="Command Skill Agent Architecture Flow" width="100%">
 </p>
 
 | Component | Role | This Repo |
